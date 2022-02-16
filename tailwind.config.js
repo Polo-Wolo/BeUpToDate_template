@@ -7,16 +7,16 @@ module.exports = {
     extend: {
       colors: {
 				'primary': '#5B6CFF',
-				'secondary': '#E9EBFF',
-				'ternary': '#F2F4FF',
+				'section-title': '#E9EBFF',
+				'card-bg': '#F2F4FF',
         'title-color': '#2E3A59',
         'content-color': '#767676',
         'nav-color': '#F7F8FA',
         'app-bg': '#FFFFFF',
 
 				'primary-dark': '#5B6CFF',
-				'secondary-dark': '#102D44',
-				'ternary-dark': '#1E3851',
+				'section-title-dark': '#102D44',
+				'card-bg-dark': '#1E3851',
         'title-color-dark': '#FFFFFF',
         'content-color-dark': '#BFBFBF',
         'nav-color-dark': '#151B28',

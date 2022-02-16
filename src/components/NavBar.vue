@@ -37,13 +37,13 @@ export default defineComponent({
 #nav {
   @apply bg-nav-color border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-nav-color-dark shadow inline-flex w-full h-20;
   a {
-    @apply rounded-lg hover:bg-secondary px-4 py-2;
+    @apply rounded-lg hover:bg-section-title px-4 py-2;
   }
   .name {
     @apply self-center text-3xl font-bold whitespace-nowrap text-primary ml-36;
   }
   .link-table {
-    @apply space-x-10 lg:space-x-14 inline-flex items-center text-title-color text-lg tracking-tight;
+    @apply space-x-8 inline-flex items-center text-title-color text-lg tracking-tight;
     a {
       @apply hover:text-primary;
     }

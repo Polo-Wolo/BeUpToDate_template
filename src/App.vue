@@ -1,26 +1,20 @@
 <template>
   <NavBar></NavBar>
-  <!-- <Education></Education> -->
+  <Education></Education>
 </template>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { mapGetters } from "vuex";
 import NavBar from "./components/NavBar.vue";
 import Education from "./components/Education.vue";
 
 export default defineComponent({
-  name: "Education",
+  name: "App",
   components: {
     NavBar,
     Education,
-  },
-  computed: {
-    ...mapGetters({
-      educations: "educations",
-    }),
   },
 });
 </script>

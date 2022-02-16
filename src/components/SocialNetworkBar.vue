@@ -29,6 +29,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .icon{
-  @apply fill-title-color hover:fill-primary rounded-lg hover:bg-secondary px-1 py-1;
+  @apply fill-title-color hover:fill-primary rounded-lg hover:bg-section-title px-1 py-1;
 }
 </style>

@@ -2,7 +2,7 @@ export interface HeaderLinks {
     title: string;
 }
 
-export interface Education {
+export interface ED {
     title: string;
     location: string;
     date: string;

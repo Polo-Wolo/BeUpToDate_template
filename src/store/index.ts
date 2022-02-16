@@ -1,4 +1,4 @@
-import { /*Project, */Education/*, WorkExperience */} from '../models'
+import { /*Project, */ED/*, WorkExperience */} from '../models'
 import { createStore } from 'vuex'
 import data from "../assets/data.json"
 
@@ -9,7 +9,7 @@ export default createStore({
 		// SET_PROJECTS(state: any, projects: Array<Project>): void {
 		// 	state.projects = projects;
 		// },
-		SET_EDUCATIONS(state: any, educations: Array<Education>): void {
+		SET_EDUCATIONS(state: any, educations: Array<ED>): void {
 			state.educations = educations;
 		},
 		// SET_WORKEXPERIENCES(state: any, workexperiences: Array<WorkExperience>): void {
@@ -27,7 +27,7 @@ export default createStore({
 		// projects(state: any): Array<Project> {
 		// 	return data.projects;
 		// }, 
-		educations(state: any): Array<Education> {
+		educations(state: any): Array<ED> {
 			return data.educations;
 		},
 		// workexperiences(state: any): Array<WorkExperience> {
