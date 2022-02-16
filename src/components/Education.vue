@@ -1,6 +1,6 @@
 <template>
   <div id="education" class="inline-flex w-full">
-    <div class="grow text-right mx-28 text-section-title text-9xl font-bold uppercase pt-64">
+    <div class="grow text-right mx-auto text-section-title text-9xl font-bold uppercase pt-64">
       <p>EDUCA</p>
       <p>TION</p>
     </div>

@@ -10,7 +10,7 @@ module.exports = {
 				'section-title': '#E9EBFF',
 				'card-bg': '#F2F4FF',
         'title-color': '#2E3A59',
-        'content-color': '#767676',
+        'content-color': '#4B4B4B',
         'nav-color': '#F7F8FA',
         'app-bg': '#FFFFFF',
 
@@ -22,6 +22,9 @@ module.exports = {
         'nav-color-dark': '#151B28',
         'app-bg-dark': '#0B111E',
 			},
+      height: {
+        '18': '4.5rem',
+      },
     },
     fontFamily: {
       'poppins': ['Poppins'],
