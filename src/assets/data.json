@@ -1,0 +1,84 @@
+{
+    "educations": [
+		{
+			"title": "General engineering degree",
+            "location": "Brest",
+			"date": "Ongoing  2019-2024",
+			"content": [
+				"I am currently studying at ENIB to become a general engineer in electronics, computer science and mechatronics."
+			],
+			"type": ""
+		},
+		{
+			"title": "Volunteer as a Vacation Camp Animator",
+            "location": "Châteaulin",
+			"date": "Juil. 2020",
+			"content": [
+				"I was a volunteer animator for a vacation camp in the ESTIVAL association of the Mennaisian community."
+			],
+			"type": "volunteering"
+		},
+		{
+			"title": "Sauveteur Secouriste du Travail - SST",
+            "location": "Brest",
+			"date": "Janv. 2020",
+			"content": [
+				"Awarded of the Sauveteur Secouriste du Travail (First Aid at Work) certificate in Plouzané.",
+				"Realized with National Engineering School of Brest - ENIB."
+			],
+			"type": ""
+		},
+		{
+			"title": "Scientific Baccalauréat",
+            "location": "Lycée Saint-Louis- Châteaulin",
+			"date": "Juil. 2019",
+			"content": [
+				"Awarded of Baccalauréat with distinction at Saint-Louis high school in Châteaulin (2012-2019).",
+				" - Specialization Computer Science and Digital Science",
+				" - European section and Breton",
+				"Realized with Saint-Louis high school in Châteaulin."
+			],
+			"type": ""
+		},
+		{
+			"title": "Brevet National de Sécurité et de Sauvetage Aquatique - BNSSA",
+            "location": "Landerneau",
+			"date": "Avr. 2020",
+			"content": [
+				"Awarded of Brevet National de Sécurité et de Sauvetage Aquatique (National Aquatic Safety and Rescue Certificate) in Landerneau.",
+				"Realized with Aqualorn pool."
+			],
+			"type": ""
+		},
+		{
+			"title": "Premiers Secours en Equipe de niveau 1 - PSE1",
+            "location": "Landerneau",
+			"date": "Avr. 2020",
+			"content": [
+				"Awarded of Premiers Secours en Équipe de niveau 1 (the First Aid Team Level 1) certification in Landerneau.",
+				"Realized with the Sauveteurs Secouristes Léonards - SSL29."
+			],
+			"type": ""
+		},
+		{
+			"title": "Solidarity journey in Haïti",
+            "location": "Port au Prince",
+			"date": "Oct. 2017",
+			"content": [
+				"Solidarity stay with young Haïtians from the Noël des Anges Centre (educational center for young people in advanced poverty).",
+				"Realized with Saint-Louis high school in Châteaulin."
+			],
+			"type": "volunteering"
+		},
+		{
+			"title": "PET for School",
+            "location": "Lycée Saint-Louis- Châteaulin",
+			"date": "Juin 2017",
+			"content": [
+				"Awarded PET for School in Brest.",
+				"English level: B1 Cambridge."
+			],
+			"type": ""
+		}
+	]
+}
