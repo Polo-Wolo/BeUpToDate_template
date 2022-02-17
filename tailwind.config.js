@@ -25,9 +25,20 @@ module.exports = {
       height: {
         '18': '4.5rem',
       },
+      fontSize :{
+        "10xl": '10rem',
+      },
+      width: {
+        '128': '32rem',
+      }
     },
     fontFamily: {
       'poppins': ['Poppins'],
+    },
+    lineHeight: {
+      '16': '4rem',
+      '24': '6rem',
+      '32': '8rem',
     },
   },
   plugins: [],

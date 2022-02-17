@@ -1,5 +1,6 @@
 <template>
   <NavBar></NavBar>
+  <MobileNavBar class="pt-14"></MobileNavBar>
   <Education></Education>
 </template>
 
@@ -7,13 +8,15 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import NavBar from "./components/NavBar.vue";
+import NavBar from "./components/navigation/NavBar.vue";
+import MobileNavBar from "./components/navigation/MobileNavBar.vue";
 import Education from "./components/Education.vue";
 
 export default defineComponent({
   name: "App",
   components: {
     NavBar,
+    MobileNavBar,
     Education,
   },
 });
@@ -26,6 +29,7 @@ export default defineComponent({
 #app {
   @apply font-poppins;
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
   -moz-osx-font-smoothing: grayscale;
 }
 </style>

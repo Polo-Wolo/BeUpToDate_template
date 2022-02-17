@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "boxicons": "^2.1.1",
+    "click-outside-vue3": "^4.0.1",
     "material-icons": "^1.10.6",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12",
