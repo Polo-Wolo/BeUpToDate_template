@@ -2,6 +2,7 @@
   <NavBar></NavBar>
   <MobileNavBar class="pt-14"></MobileNavBar>
   <Education></Education>
+  <WorkExperience></WorkExperience>
 </template>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -11,6 +12,7 @@ import { defineComponent } from "vue";
 import NavBar from "./components/navigation/NavBar.vue";
 import MobileNavBar from "./components/navigation/MobileNavBar.vue";
 import Education from "./components/Education.vue";
+import WorkExperience from "./components/WorkExperience.vue";
 
 export default defineComponent({
   name: "App",
@@ -18,6 +20,7 @@ export default defineComponent({
     NavBar,
     MobileNavBar,
     Education,
+    WorkExperience,
   },
 });
 </script>

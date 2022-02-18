@@ -1,18 +1,18 @@
 <template>
   <div class="timeline-card">
     <!-- Date -->
-    <div class="date">{{ education.date }}</div>
+    <div class="date" :class="{'pt-7': first_item, 'pt-12': !first_item}">{{ education.date }}</div>
     <!-- Line -->
     <div class="timeline">
-      <div class="circle"></div>
+      <div class="circle" :class="{'top-7': first_item, 'top-11': !first_item}"></div>
       <div class="line" :class="{'rounded-t-full': first_item, 'rounded-b-full': last_item}"></div>
     </div>
     <!-- Card -->
     <div class="card" :class="{'mb-4': first_item, 'mt-4':last_item, 'my-4': !first_item && !last_item}">
-      <div class="flex space-x-3 xl:space-x-4">
+      <div class="flex md:space-x-3 xl:space-x-4">
         <div class="circle-icon">
-          <svg v-if="education.type === ''" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="iconify iconify--mdi w-6 h-6" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3m6.82 6L12 12.72L5.18 9L12 5.28L18.82 9M17 16l-5 2.72L7 16v-3.73L12 15l5-2.73V16z" fill="currentColor"></path></svg>
-          <svg  v-else-if="education.type === 'volunteering'" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="iconify iconify--mdi w-5 h-5" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M16 3.23C16.71 2.41 17.61 2 18.7 2c.91 0 1.67.33 2.3 1c.63.67.96 1.43 1 2.3c0 .7-.33 1.51-1 2.46s-1.32 1.74-1.97 2.39c-.65.64-1.66 1.59-3.03 2.85c-1.39-1.26-2.41-2.21-3.06-2.85s-1.31-1.44-1.97-2.39C10.31 6.81 10 6 10 5.3c0-.91.32-1.67.97-2.3c.65-.63 1.43-.96 2.34-1c1.07 0 1.96.41 2.69 1.23M22 19v1l-8 2.5l-7-1.94V22H1V11h7.97l6.16 2.3A2.89 2.89 0 0 1 17 16h2c1.66 0 3 1.34 3 3M5 20v-7H3v7h2m14.9-1.43c-.16-.33-.51-.57-.9-.57h-5.35c-.54 0-1.07-.08-1.58-.25l-2.38-.79l.63-1.9l2.38.79c.3.1 2.3.15 2.3.15c0-.37-.23-.7-.57-.83L8.61 13H7v5.5l6.97 1.91l5.93-1.84z" stroke="none" fill="currentColor"></path></svg>
+          <svg v-if="education.type === ''" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="iconify iconify--fa-solid w-5" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 512"><path fill="currentColor" d="M622.34 153.2L343.4 67.5c-15.2-4.67-31.6-4.67-46.79 0L17.66 153.2c-23.54 7.23-23.54 38.36 0 45.59l48.63 14.94c-10.67 13.19-17.23 29.28-17.88 46.9C38.78 266.15 32 276.11 32 288c0 10.78 5.68 19.85 13.86 25.65L20.33 428.53C18.11 438.52 25.71 448 35.94 448h56.11c10.24 0 17.84-9.48 15.62-19.47L82.14 313.65C90.32 307.85 96 298.78 96 288c0-11.57-6.47-21.25-15.66-26.87c.76-15.02 8.44-28.3 20.69-36.72L296.6 284.5c9.06 2.78 26.44 6.25 46.79 0l278.95-85.7c23.55-7.24 23.55-38.36 0-45.6zM352.79 315.09c-28.53 8.76-52.84 3.92-65.59 0l-145.02-44.55L128 384c0 35.35 85.96 64 192 64s192-28.65 192-64l-14.18-113.47l-145.03 44.56z"></path></svg>
+          <svg v-else-if="education.type === 'volunteering'" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="iconify iconify--fa-solid w-5" preserveAspectRatio="xMidYMid meet" viewBox="0 0 576 512"><path fill="currentColor" d="M275.3 250.5c7 7.4 18.4 7.4 25.5 0l108.9-114.2c31.6-33.2 29.8-88.2-5.6-118.8c-30.8-26.7-76.7-21.9-104.9 7.7L288 36.9l-11.1-11.6C248.7-4.4 202.8-9.2 172 17.5c-35.3 30.6-37.2 85.6-5.6 118.8l108.9 114.2zm290 77.6c-11.8-10.7-30.2-10-42.6 0L430.3 402c-11.3 9.1-25.4 14-40 14H272c-8.8 0-16-7.2-16-16s7.2-16 16-16h78.3c15.9 0 30.7-10.9 33.3-26.6c3.3-20-12.1-37.4-31.6-37.4H192c-27 0-53.1 9.3-74.1 26.3L71.4 384H16c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16h356.8c14.5 0 28.6-4.9 40-14L564 377c15.2-12.1 16.4-35.3 1.3-48.9z"></path></svg>
         </div>
         <!-- Card Header -->
         <div class="card-header">
@@ -32,13 +32,13 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { ED } from "../../models";
+import { Education } from "../../models";
 
 export default defineComponent({
   name: "EducationCard",
   props: {
     education: {
-      type: Object as PropType<ED>,
+      type: Object as PropType<Education>,
       required: true,
     },
     first_item: {
@@ -59,33 +59,33 @@ export default defineComponent({
 .timeline-card {
   @apply flex space-x-4 md:space-x-8 2xl:space-x-16;
   .date {
-    @apply w-36 pt-12 font-bold text-xs md:text-sm 2xl:text-base text-title-color text-right;
+    @apply w-24 md:w-32 font-bold text-xs md:text-sm 2xl:text-base text-title-color text-center md:text-right;
   }
   .timeline {
-    @apply relative w-6 md:w-3 lg:w-4 xl:w-5;
+    @apply relative w-6 md:w-3.5 lg:w-4 xl:w-5;
     .circle {
-      @apply w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 bg-primary rounded-full top-11 absolute -left-1/2;
+      @apply w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 bg-primary rounded-full absolute -left-1/2;
     }
     .line {
       @apply bg-primary w-1.5 lg:w-2 h-full absolute;
     }
   }
   .card {
-    @apply bg-card-bg rounded md:rounded-2xl py-2 md:px-3 md:py-3 xl:px-4 xl:py-4 flex-col space-y-2 md:space-y-3 w-128;
+    @apply bg-card-bg rounded md:rounded-2xl py-2 md:px-3 md:py-3 xl:px-4 xl:py-4 flex-col space-y-1 md:space-y-3 w-128;
     .circle-icon {
       @apply hidden md:inline-flex w-11 h-11 rounded-full bg-primary justify-center items-center text-white flex-none;
     }
     .card-header {
-      @apply grow text-title-color items-center flex-col;
+      @apply grow text-title-color items-center flex-col my-auto px-3;
       .title {
-        @apply font-bold text-xs md:text-sm;
+        @apply font-bold text-xs md:text-sm tracking-tight;
       }
       .location {
-        @apply font-semibold text-xs md:text-sm;
+        @apply hidden md:block font-semibold text-xs md:text-sm tracking-tight;
       }
     }
     .content {
-      @apply text-content-color text-xs md:text-sm px-3 text-justify;
+      @apply text-content-color text-xs md:text-sm px-3 text-justify tracking-tight;
     }
   }
 }
