@@ -1,8 +1,9 @@
 <template>
   <NavBar></NavBar>
-  <MobileNavBar class="pt-14"></MobileNavBar>
   <Education></Education>
   <WorkExperience></WorkExperience>
+  <div class="mb-16 lg:mb-0"></div>
+  <MobileNavBar></MobileNavBar>
 </template>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
