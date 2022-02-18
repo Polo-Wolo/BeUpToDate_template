@@ -32,6 +32,9 @@ module.exports = {
         '3.25':'0.8125rem',
         '3.75':'0.9375rem',
         '128': '32rem',
+      },
+      boxShadow: {
+        'top': '0px -1px 2px 0px rgb(0 0 0 / 0.1)',
       }
     },
     fontFamily: {

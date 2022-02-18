@@ -71,7 +71,7 @@ export default defineComponent({
     }
   }
   .card {
-    @apply bg-card-bg rounded md:rounded-2xl py-2 md:px-3 md:py-3 xl:px-4 xl:py-4 flex-col space-y-1 md:space-y-3 w-128;
+    @apply bg-card-bg rounded-lg md:rounded-2xl py-2 md:px-3 md:py-3 xl:px-4 xl:py-4 flex-col space-y-1 md:space-y-3 w-128;
     .circle-icon {
       @apply hidden md:inline-flex w-11 h-11 rounded-full bg-primary justify-center items-center text-white flex-none;
     }

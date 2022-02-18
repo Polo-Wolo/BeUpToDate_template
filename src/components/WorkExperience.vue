@@ -88,9 +88,9 @@ export default defineComponent({
 .dotted-line {
   @apply space-y-2 my-2;
   .fake-timeline-card {
-    @apply flex space-x-4 md:space-x-8 2xl:space-x-16 justify-end;
+    @apply flex md:space-x-8 2xl:space-x-16 justify-end;
     .fake-date {
-      @apply order-last w-24 md:w-32 ml-6;
+      @apply order-last w-24 md:w-32 ml-4;
     }
     .fake-timeline {
       @apply relative w-6 md:w-3.75 lg:w-4 xl:w-5;
@@ -102,7 +102,7 @@ export default defineComponent({
       }
     }
     .fake-card {
-      @apply order-first w-128 md:px-3 xl:px-4;
+      @apply order-first w-128 md:px-3 xl:px-4 mr-4;
     }
   }
 }

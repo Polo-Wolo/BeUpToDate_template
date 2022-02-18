@@ -60,9 +60,9 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .timeline-card {
-  @apply flex space-x-4 md:space-x-8 2xl:space-x-16 justify-end;
+  @apply flex md:space-x-8 2xl:space-x-16 justify-end;
   .date {
-    @apply order-last w-24 md:w-32 font-bold text-xs md:text-sm 2xl:text-base text-title-color ml-6;
+    @apply order-last w-24 md:w-32 font-bold text-xs md:text-sm 2xl:text-base text-title-color ml-4;
   }
   .timeline {
     @apply relative w-6 md:w-3.75 lg:w-4 xl:w-5;
@@ -74,7 +74,7 @@ export default defineComponent({
     }
   }
   .card {
-    @apply order-first bg-card-bg rounded md:rounded-2xl py-2 md:px-3 md:py-3 xl:px-4 xl:py-4 flex-col space-y-1 md:space-y-3 w-128;
+    @apply order-first bg-card-bg rounded-lg md:rounded-2xl py-2 md:px-3 md:py-3 xl:px-4 xl:py-4 flex-col space-y-1 md:space-y-3 w-128 mr-4;
     .circle-icon {
       @apply hidden md:inline-flex w-11 h-11 rounded-full bg-primary justify-center items-center text-white flex-none;
     }
