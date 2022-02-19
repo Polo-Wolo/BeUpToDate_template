@@ -44,9 +44,9 @@ export default defineComponent({
     @apply self-center text-3xl font-bold whitespace-nowrap text-primary;
   }
   .link-table {
-    @apply xl:space-x-3 space-x-1 inline-flex items-center text-title-color text-sm xl:text-lg tracking-tight;
+    @apply xl:space-x-6 space-x-1 inline-flex items-center text-title-color text-sm xl:text-lg tracking-tight;
     a {
-      @apply hover:text-primary;
+      @apply hover:text-primary tracking-tighter;
     }
   }
 }

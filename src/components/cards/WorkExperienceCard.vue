@@ -62,7 +62,7 @@ export default defineComponent({
 .timeline-card {
   @apply flex space-x-4 md:space-x-8 2xl:space-x-16 justify-end;
   .date {
-    @apply order-last min-w-24 md:w-32 font-bold text-xs md:text-sm 2xl:text-base text-title-color ml-4;
+    @apply order-last min-w-24 md:w-32 font-bold text-xs md:text-sm 2xl:text-base text-title-color tracking-tight ml-4;
   }
   .timeline {
     @apply relative w-5 lg:w-6 xl:w-7;
@@ -87,7 +87,7 @@ export default defineComponent({
         @apply font-medium text-xs md:text-sm tracking-tight text-right;
       }
       .title-type {
-        @apply font-bold text-xs md:text-sm tracking-tight text-right;
+        @apply font-bold text-xs md:text-sm tracking-tighter text-right;
       }
     }
     .content {
