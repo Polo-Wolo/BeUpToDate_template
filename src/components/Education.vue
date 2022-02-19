@@ -7,17 +7,17 @@
     <div class="w-full lg:w-9/12 xl:w-7/12">
       <!-- Dotted -->
       <div class="dotted-line">
-        <div class ="timeline-card">
+        <div class ="fake-timeline-card">
           <div class="fake-date"></div>
-          <div class="fake-timeline">
-            <div class="small-line"></div>
+          <div class="fake-timeline small-line">
+            <div class="line small-line"></div>
           </div>
           <div class="fake-card"></div>
         </div>
-        <div class ="timeline-card">
+        <div class ="fake-timeline-card">
           <div class="fake-date"></div>
-          <div class="fake-timeline">
-            <div class="medium-line"></div>
+          <div class="fake-timeline medium-line">
+            <div class="line medium-line"></div>
           </div>
           <div class="fake-card"></div>
         </div>
@@ -33,17 +33,17 @@
       </EducationCard>
       <!-- Dotted -->
       <div class="dotted-line">
-        <div class ="timeline-card">
+        <div class ="fake-timeline-card">
           <div class="fake-date"></div>
-          <div class="fake-timeline">
-            <div class="medium-line"></div>
+          <div class="fake-timeline medium-line">
+            <div class="line medium-line"></div>
           </div>
           <div class="fake-card"></div>
         </div>
-        <div class ="timeline-card">
+        <div class ="fake-timeline-card">
           <div class="fake-date"></div>
-          <div class="fake-timeline">
-            <div class="small-line"></div>
+          <div class="fake-timeline small-line">
+            <div class="line small-line"></div>
           </div>
           <div class="fake-card"></div>
         </div>
@@ -83,22 +83,25 @@ export default defineComponent({
 }
 .dotted-line {
   @apply space-y-2 my-2;
-  .timeline-card {
+  .fake-timeline-card {
     @apply flex space-x-4 md:space-x-8 2xl:space-x-16;
     .fake-date {
-      @apply w-24 md:w-32 ;
+      @apply min-w-24 md:w-32;
+    }
+    .medium-line {
+      @apply h-4 ;
+    }
+    .small-line {
+      @apply h-2;
     }
     .fake-timeline {
-      @apply relative w-6 md:w-3.5 lg:w-4 xl:w-5;
-      .medium-line {
-        @apply bg-primary w-1.5 lg:w-2 h-4 lg:h-5 rounded;
-      }
-      .small-line {
-        @apply bg-primary w-1.5 lg:w-2 h-2 lg:h-3 rounded;
+      @apply relative w-5 lg:w-6 xl:w-7;
+      .line {
+        @apply bg-primary w-1.5 lg:w-2 rounded absolute right-1/2 transform translate-x-1/2;
       }
     }
     .fake-card {
-      @apply w-128 md:px-3 xl:px-4;
+      @apply w-128;
     }
   }
 }

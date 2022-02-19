@@ -1,7 +1,7 @@
 <template>
   <div class="timeline-card">
     <!-- Date -->
-    <div class="date" :class="{'pt-7': first_item, 'pt-12': !first_item}">{{ education.date }}</div>
+    <div class="date" :class="{'pt-8': first_item, 'pt-12': !first_item}">{{ education.date }}</div>
     <!-- Line -->
     <div class="timeline">
       <div class="circle" :class="{'top-7': first_item, 'top-11': !first_item}"></div>
@@ -59,15 +59,15 @@ export default defineComponent({
 .timeline-card {
   @apply flex space-x-4 md:space-x-8 2xl:space-x-16;
   .date {
-    @apply w-24 md:w-32 font-bold text-xs md:text-sm 2xl:text-base text-title-color text-center md:text-right;
+    @apply min-w-24 md:w-32 font-bold text-xs md:text-sm 2xl:text-base text-title-color text-center md:text-right;
   }
   .timeline {
-    @apply relative w-6 md:w-3.5 lg:w-4 xl:w-5;
+    @apply relative w-5 lg:w-6 xl:w-7;
     .circle {
-      @apply w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 bg-primary rounded-full absolute -left-1/2;
+      @apply w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 bg-primary rounded-full absolute right-1/2 transform translate-x-1/2;
     }
     .line {
-      @apply bg-primary w-1.5 lg:w-2 h-full absolute;
+      @apply bg-primary w-1.5 lg:w-2 h-full absolute right-1/2 transform translate-x-1/2;
     }
   }
   .card {

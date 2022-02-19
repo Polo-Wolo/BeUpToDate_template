@@ -1,5 +1,6 @@
 <template>
   <NavBar></NavBar>
+  <!--<AboutMe></AboutMe>-->
   <Education></Education>
   <WorkExperience></WorkExperience>
   <div class="mb-16 lg:mb-0"></div>
@@ -14,6 +15,7 @@ import NavBar from "./components/navigation/NavBar.vue";
 import MobileNavBar from "./components/navigation/MobileNavBar.vue";
 import Education from "./components/Education.vue";
 import WorkExperience from "./components/WorkExperience.vue";
+import AboutMe from "./components/AboutMe.vue";
 
 export default defineComponent({
   name: "App",
@@ -22,6 +24,7 @@ export default defineComponent({
     MobileNavBar,
     Education,
     WorkExperience,
+    AboutMe,
   },
 });
 </script>

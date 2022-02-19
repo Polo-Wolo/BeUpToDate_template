@@ -34,7 +34,11 @@ module.exports = {
         '128': '32rem',
       },
       boxShadow: {
-        'top': '0px -1px 2px 0px rgb(0 0 0 / 0.1)',
+        'top': '0px -3px 6px 0px rgb(0 0 0 / 0.1)',
+      },
+      minWidth: {
+        '24': '6rem',
+        '32': '8rem',
       }
     },
     fontFamily: {
