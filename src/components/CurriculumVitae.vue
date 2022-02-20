@@ -60,7 +60,7 @@ export default defineComponent({
     @apply rounded-2xl outline outline-0 hover:outline-8 outline-primary transition-all duration-100 ease-in-out;
   }
   .btn {
-    @apply mx-auto flex items-center h-10 px-5 font-medium space-x-2 text-title-color hover:text-white bg-gray-300 rounded-lg hover:bg-primary transition-all duration-75 ease-in-out;
+    @apply mx-auto flex items-center h-10 px-5 font-medium space-x-2 text-title-color hover:text-white bg-gray-200 rounded-lg hover:bg-primary transition-all duration-75 ease-in-out;
   }
 }
 </style>
