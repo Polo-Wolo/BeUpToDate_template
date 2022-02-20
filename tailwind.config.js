@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       colors: {
 				'primary': '#5B6CFF',
-				'section-title': '#E9EBFF',
+				'section-title': '#EBEDFF',
 				'card-bg': '#F2F4FF',
         'title-color': '#2E3A59',
         'content-color': '#4B4B4B',
