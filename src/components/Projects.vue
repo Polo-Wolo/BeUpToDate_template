@@ -1,13 +1,16 @@
 <template>
-  <div class="grid grid-cols-3 gap-4">
-    <div>1</div>
-    <div>1</div>
-    <div>1</div>
-    <div>1</div>
-    <div>1</div>
-    <div>1</div>
-    <div>1</div>
-  </div>
+  <div id="projects">
+    <div class="w-full lg:w-9/12 xl:w-7/12 ">
+      <div class="grid grid-cols-2 gap-x-4">
+        <ProjectCard class="justify-self-center"
+          v-for="(project, index) in projects"
+          :key="index"
+          :project="project"
+        >
+        </ProjectCard>
+      </div>
+    </div>
+</div>
 </template>
 
 <script lang="ts">
@@ -19,6 +22,11 @@ export default defineComponent({
   name: "Projects",
   components: {
     ProjectCard,
+  },
+  computed: {
+    ...mapGetters({
+      projects: "projects",
+    }),
   },
 });
 </script>

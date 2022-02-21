@@ -1,6 +1,6 @@
 <template>
   <NavBar></NavBar>
-  <ProjectCard></ProjectCard>
+  <Projects></Projects>
   <Education></Education>
   <WorkExperience></WorkExperience>
   <CurriculumVitae></CurriculumVitae>
@@ -17,7 +17,7 @@ import MobileNavBar from "./components/navigation/MobileNavBar.vue";
 import Education from "./components/Education.vue";
 import WorkExperience from "./components/WorkExperience.vue";
 import CurriculumVitae from "./components/CurriculumVitae.vue";
-import ProjectCard from "./components/cards/ProjectCard.vue";
+import Projects from "./components/Projects.vue";
 
 export default defineComponent({
   name: "App",
@@ -27,7 +27,7 @@ export default defineComponent({
     Education,
     WorkExperience,
     CurriculumVitae,
-    ProjectCard,
+    Projects,
   },
 });
 </script>

@@ -18,3 +18,12 @@ export interface WorkExperience {
     time: string;
     content: Array<string>;
 }
+
+export interface Project {
+    title: string;
+    type: string;
+    date: string;
+    time: string;
+    content: Array<string>;
+    pictures_url: Array<string>;
+}
