@@ -1,9 +1,9 @@
 <template>
   <NavBar></NavBar>
-  <Projects></Projects>
   <Education></Education>
   <WorkExperience></WorkExperience>
   <CurriculumVitae></CurriculumVitae>
+  <Projects></Projects>
   <div class="mb-20 lg:mb-0"></div>
   <MobileNavBar></MobileNavBar>
 </template>

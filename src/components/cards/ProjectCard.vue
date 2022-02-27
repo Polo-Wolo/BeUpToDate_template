@@ -1,6 +1,6 @@
 <template>
   <div class="card group">
-    <div class="picture" style="background-image: url(https://picsum.photos/300/200)"></div>
+    <div class="picture" :style="{ backgroundImage: 'url(' + project.pictures_url[0] + ')' }"></div>
     <div class="content">
       <span class="title">
         {{ project.title }}
@@ -30,12 +30,17 @@ export default defineComponent({
       required: true,
     },
   },
+  computed: {
+    backgroundPictureUrl: function() {
+      return;
+    }
+  },
 });
 </script>
 
 <style lang="scss" scoped>
 .card {
-  @apply relative w-80 h-56 rounded-2xl outline outline-0 hover:outline-8 outline-primary transition-all duration-100 ease-in-out m-2.5;
+  @apply relative w-full md:w-80 h-56 rounded-2xl outline outline-0 hover:outline-8 outline-primary transition-all duration-100 ease-in-out m-2.5;
   .picture {
     @apply w-full h-full bg-cover bg-center bg-no-repeat rounded-2xl flex filter brightness-50 transition-all duration-100 ease-in-out;
   }
