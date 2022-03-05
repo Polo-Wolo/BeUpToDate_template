@@ -36,7 +36,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 #nav {
-  @apply hidden lg:inline-flex bg-nav-color border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-nav-color-dark shadow w-full h-18;
+  @apply hidden lg:inline-flex bg-nav-color border-gray-200 px-2 sm:px-4 py-2.5 shadow w-full h-18;
   a {
     @apply rounded-lg hover:bg-section-title px-4 py-2;
   }
