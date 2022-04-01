@@ -8,12 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chenfengyuan/vue-carousel": "^2.0.0",
     "boxicons": "^2.1.1",
     "click-outside-vue3": "^4.0.1",
     "material-icons": "^1.10.6",
-    "vue": "^3.2.25",
+    "vue": "^3.2.31",
     "vue-pdf-embed": "^1.0.8",
     "vue-router": "^4.0.12",
+    "vue3-carousel": "^0.1.38",
     "vuex": "^4.0.2"
   },
   "devDependencies": {

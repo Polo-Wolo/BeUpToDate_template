@@ -1,9 +1,7 @@
 <template>
   <NavBar></NavBar>
-  <Education></Education>
-  <WorkExperience></WorkExperience>
-  <CurriculumVitae></CurriculumVitae>
-  <Projects></Projects>
+  <!--<HomeView></HomeView>-->
+  <ProjectView></ProjectView>
   <div class="mb-20 lg:mb-0"></div>
   <MobileNavBar></MobileNavBar>
 </template>
@@ -11,23 +9,20 @@
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import NavBar from "./components/navigation/NavBar.vue";
-import MobileNavBar from "./components/navigation/MobileNavBar.vue";
-import Education from "./components/Education.vue";
-import WorkExperience from "./components/WorkExperience.vue";
-import CurriculumVitae from "./components/CurriculumVitae.vue";
-import Projects from "./components/Projects.vue";
+import { defineComponent } from "vue"
+import NavBar from "./components/navigation/NavBar.vue"
+import MobileNavBar from "./components/navigation/MobileNavBar.vue"
+import HomeView from "./views/HomeView.vue"
+import ProjectView from "./views/ProjectView.vue"
+
 
 export default defineComponent({
   name: "App",
   components: {
     NavBar,
     MobileNavBar,
-    Education,
-    WorkExperience,
-    CurriculumVitae,
-    Projects,
+    HomeView,
+    ProjectView,
   },
 });
 </script>
