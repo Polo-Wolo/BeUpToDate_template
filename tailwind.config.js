@@ -43,15 +43,18 @@ module.exports = {
       },
       maxWidth: {
         '128': '20rem',
-      }
+      },
+      padding: {
+        '17': '4.25rem',
+      },
+      lineHeight: {
+        '16': '4rem',
+        '24': '6rem',
+        '32': '8rem',
+      },
     },
     fontFamily: {
       'poppins': ['Poppins'],
-    },
-    lineHeight: {
-      '16': '4rem',
-      '24': '6rem',
-      '32': '8rem',
     },
   },
   plugins: [],
