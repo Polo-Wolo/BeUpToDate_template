@@ -52,6 +52,9 @@ module.exports = {
         '24': '6rem',
         '32': '8rem',
       },
+      scale: {
+        '175': '1.75',
+      },
     },
     fontFamily: {
       'poppins': ['Poppins'],

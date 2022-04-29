@@ -1,5 +1,5 @@
 <template>
-    <div class="w-1/2 my-20 mx-auto">
+    <div class="mx-3 lg:mx-auto my-2 md:   lg:my-12 xl:my-20 lg:w-2/3 xl:w-1/2">
       <div class="title">
         This is your project title
       </div>
@@ -20,14 +20,14 @@
           </div>
         </div>
       </div>
-      <Carousel :itemsToShow="3" :wrapAround="true" :autoplay="4000" :transition="500">
+      <Carousel :settings="settings" :breakpoints="breakpoints" :wrapAround="true" :autoplay="4000" :transition="500">
           <Slide v-for="slide in 4" :key="slide">
               <div class="carousel__item">{{ slide }}</div>
               <!-- https://picsum.photos/200/300 -->
           </Slide>
 
           <template #addons>
-              <Navigation class="bg-primary border-white"/>
+              <Navigation class="bg-primary border-white hidden lg:block"/>
           </template>
       </Carousel>
       <p class="content">
@@ -50,6 +50,21 @@ export default defineComponent({
     Navigation,
     Slide,
   },
+  data: () => ({
+    // carousel settings
+    settings: {
+      itemsToShow: 1,
+      snapAlign: 'center',
+    },
+    // breakpoints are mobile first
+    // any settings not specified will fallback to the carousel settings
+    breakpoints: {
+      // 700px and up
+      768: {
+        itemsToShow: 2,
+      },
+    },
+  }),
 });
 </script>
 
@@ -66,7 +81,7 @@ export default defineComponent({
 }
 
 .carousel__slide {
-  @apply py-17;
+  @apply py-4 md:py-12 xl:py-17;
 }
 
 .carousel__prev,
@@ -89,15 +104,14 @@ export default defineComponent({
   transform: scale(0.9) translate(10px);
 }
 .carousel__slide--active > .carousel__item {
-  transform: scale(1.75);
-  @apply brightness-100 z-50;
+  @apply brightness-100 z-50 scale-100 md:scale-125 xl:scale-175;
 }
 
 .title {
   @apply text-title-color font-bold text-3xl;
 }
 .details-bar {
-  @apply text-title-color mx-14 mt-4;
+  @apply text-title-color mx-2 md:mx-12 lg:mx-14 mt-4;
   .icon {
     @apply w-6 h-6 mx-1 stroke-2;
   }
@@ -106,16 +120,10 @@ export default defineComponent({
   @apply inline-flex items-center font-bold ;
 }
 .content {
-  @apply text-title-color mx-14 mt-4 leading-loose text-justify;
+  @apply text-title-color mx-6 xl:mx-14 lg:mt-4 leading-loose text-justify;
 }
 </style>
 
 <!--
-<template>
-    <span>Project View</span>
-</template>
 
-<script lang="ts"></script>
-
-<style lang="scss" scoped></style>
 -->
