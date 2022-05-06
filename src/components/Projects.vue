@@ -10,6 +10,7 @@
           v-for="(project, index) in projects"
           :key="index"
           :project="project"
+          :to="index"
         >
         </ProjectCard>
       </div>

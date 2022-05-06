@@ -1,6 +1,6 @@
 <template>
   <NavBar></NavBar>
-  <!--<HomeView></HomeView>-->
+  <HomeView></HomeView>
   <ProjectView></ProjectView>
   <div class="mb-20 lg:mb-0"></div>
   <MobileNavBar></MobileNavBar>

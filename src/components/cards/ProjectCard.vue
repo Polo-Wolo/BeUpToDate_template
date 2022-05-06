@@ -1,9 +1,10 @@
 <template>
+  <router-link :key="project.id"></router-link>
   <div class="card group">
     <div class="picture" :style="{ backgroundImage: 'url(' + project.pictures_url[0] + ')' }"></div>
     <div class="content">
       <span class="title">
-        {{ project.title }}
+          {{ project.title }}
       </span>
       <div class="date">
         <span>
