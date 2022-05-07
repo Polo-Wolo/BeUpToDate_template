@@ -4,7 +4,7 @@
       <div>PRO</div>
       <div>jECTS</div>
     </div>
-    <div class="w-full flex lg:justify-end lg:w-9/12 xl:w-7/12 justify-cente">
+    <div class="w-full flex lg:justify-end lg:w-9/12 xl:w-7/12 justify-center">
       <div class="grid gris-cols-1 md:grid-cols-2 lg:mx-12 w-full lg:w-auto">
         <ProjectCard class="justify-self-center"
           v-for="(project, index) in projects"
