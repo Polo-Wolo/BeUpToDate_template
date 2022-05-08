@@ -1,17 +1,17 @@
 <template>
   <nav id="nav">
     <div class="xl:w-1/12"></div>
-    <a href="" class="name">Paul</a>
+    <router-link to="/" class="name">Paul</router-link>
     <div class="flex-grow"></div>
     <div class="link-table">
-      <a href="" class="inline-flex items-center space-x-2 xl:space-x-3 group">
+      <router-link to="/" class="inline-flex items-center space-x-2 xl:space-x-3 group">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="iconify iconify--fluent w-5 h-5" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="currentColor" d="M8.687 1.262a1 1 0 0 0-1.374 0L2.469 5.84A1.5 1.5 0 0 0 2 6.931v5.57A1.5 1.5 0 0 0 3.5 14H5a1.5 1.5 0 0 0 1.5-1.5V10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2.5A1.5 1.5 0 0 0 11 14h1.5a1.5 1.5 0 0 0 1.5-1.5V6.93a1.5 1.5 0 0 0-.47-1.09L8.687 1.26Z"></path></svg>
         <span class="font-bold underline decoration-4 underline-offset-4 decoration-primary group-hover:no-underline">Home</span>
-      </a>
-      <a href="#education">Education</a>
-      <a href="#work-experience">Work Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#about-me">About Me</a>
+      </router-link>
+      <router-link to="/#education">Education</router-link>
+      <router-link to="/#work-experience">Work Experience</router-link>
+      <router-link to="/#projects">Projects</router-link>
+      <router-link to="/#about-me">About Me</router-link>
     </div>
     <div class="flex-grow"></div>
     <SocialNetworkBar></SocialNetworkBar>

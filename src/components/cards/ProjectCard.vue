@@ -1,5 +1,6 @@
 <template>
-  <router-link :key="project.id" class="w-full flex justify-center">
+<div>
+  <router-link :to="{ name: 'Projects', params: { id: project.id }}">
     <div class="card group">
       <div class="picture" :style="{ backgroundImage: 'url(' + project.pictures_url[0] + ')' }"></div>
       <div class="content">
@@ -18,6 +19,7 @@
       </div>
     </div>
   </router-link>
+</div>
 </template>
 
 <script lang="ts">

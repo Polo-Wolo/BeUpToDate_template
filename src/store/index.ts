@@ -26,6 +26,9 @@ export default createStore({
 	getters: {
 		projects(state: any): Array<Project> {
 			return data.projects;
+		},
+		getProjectById(state: any): Function {
+			return (id: Number)=>data.projects.find(project=>project.id == id) as Project;
 		}, 
 		educations(state: any): Array<Education> {
 			return data.educations;

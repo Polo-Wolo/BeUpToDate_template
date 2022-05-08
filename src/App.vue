@@ -1,7 +1,6 @@
 <template>
   <NavBar></NavBar>
-  <HomeView></HomeView>
-  <!--<ProjectView></ProjectView>-->
+  <router-view></router-view>
   <div class="mb-20 lg:mb-0"></div>
   <MobileNavBar></MobileNavBar>
 </template>
@@ -12,17 +11,13 @@
 import { defineComponent } from "vue"
 import NavBar from "./components/navigation/NavBar.vue"
 import MobileNavBar from "./components/navigation/MobileNavBar.vue"
-import HomeView from "./views/HomeView.vue"
-import ProjectView from "./views/ProjectView.vue"
 
 
 export default defineComponent({
   name: "App",
   components: {
     NavBar,
-    MobileNavBar,
-    HomeView,
-    ProjectView,
+    MobileNavBar
   },
 });
 </script>
