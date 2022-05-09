@@ -16,9 +16,11 @@ const router = createRouter({
       component: ProjectView
     }
   ],
-  scrollBehavior (to, from, savedPosition) {
-    return { top: 0 }
-},
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+       return { el: to.hash }
+    }
+  },
 })
 
 export default router
