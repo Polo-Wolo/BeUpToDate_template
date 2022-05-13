@@ -44,7 +44,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .card {
-  @apply relative w-full md:w-80 h-56 rounded-2xl outline outline-0 hover:outline-8 outline-primary transition-all duration-100 ease-in-out m-2.5;
+  @apply relative w-full mx-auto md:w-80 h-56 rounded-2xl outline outline-0 hover:outline-8 outline-primary transition-all duration-100 ease-in-out m-2.5;
   .picture {
     @apply w-full h-full bg-cover bg-center bg-no-repeat rounded-2xl flex filter brightness-50 transition-all duration-100 ease-in-out;
   }

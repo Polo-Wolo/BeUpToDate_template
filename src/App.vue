@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue"
-import Preview from "./components/Preview.vue"
+import Preview from "./Preview.vue"
 
 
 export default defineComponent({

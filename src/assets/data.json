@@ -1,4 +1,20 @@
 {
+	"infos":
+	{
+		"first_name": "Paul",
+		"last_name": "Walczak",
+		"mail": "paul.wzk.pro@gmail.com",
+		"phone": "+33 6 15 51 14 06",
+		"adress": "80 rue du Torpilleur Foudroyant",
+		"city": "Brest",
+		"zip": "29200",
+		"licence": "B",
+		"linkedin": "https://www.linkedin.com/in/paul-walczak-639106194/",
+		"discord": "https://discordapp.com/users/463767435359551516/",
+		"facebook": "https://www.facebook.com/profile.php?id=100009639675518",
+		"gihub": "https://github.com/Polo-Wolo"
+
+	},
 	"educations": [
 		{
 			"title": "Generalist Engineer",

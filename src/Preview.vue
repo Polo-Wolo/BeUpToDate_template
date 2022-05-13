@@ -14,8 +14,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue"
-import NavBar from "./navigation/NavBar.vue"
-import MobileNavBar from "./navigation/MobileNavBar.vue"
+import NavBar from "./components/navigation/NavBar.vue"
+import MobileNavBar from "./components/navigation/MobileNavBar.vue"
 
 
 export default defineComponent({
