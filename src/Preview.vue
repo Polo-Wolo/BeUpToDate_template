@@ -3,37 +3,31 @@
   <router-view></router-view>
   <div class="mb-20 lg:mb-0"></div>
   <MobileNavBar></MobileNavBar>
-  <button class="scroll-btn" @click="moveUp">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="iconify iconify--fluent w-10       h-10     " preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
-      <path fill="currentColor" d="M3.146 10.354a.5.5 0 0 0 .708 0L8 6.207l4.146 4.147a.5.5 0 0 0 .708-.708l-4.5-4.5a.5.5 0 0 0-.708 0l-4.5 4.5a.5.5 0 0 0 0 .708Z"></path>
-    </svg>
-  </button>
+  <ScrollButton></ScrollButton>
 </template>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <script lang="ts">
-import { defineComponent } from "vue"
-import NavBar from "./components/navigation/NavBar.vue"
-import MobileNavBar from "./components/navigation/MobileNavBar.vue"
+import { defineComponent } from "vue";
+import NavBar from "./components/navigation/NavBar.vue";
+import MobileNavBar from "./components/navigation/MobileNavBar.vue";
+import ScrollButton from "./components/utils/ScrollButton.vue";
+
 
 
 export default defineComponent({
   name: "Preview",
   components: {
     NavBar,
-    MobileNavBar
+    MobileNavBar,
+    ScrollButton
   },
-  methods:{
-    moveUp(): Function{
-      window.scrollTo(0,0);
-    }
-  }
 });
 </script>
 
 <style lang="scss">
 .scroll-btn {
-  @apply animate-bounce fixed bottom-4 right-4 flex items-center p-2 font-medium text-title-color hover:text-white bg-gray-200 rounded-3xl hover:bg-primary transition-all duration-75 ease-in-out;
+  @apply animate-bounce fixed bottom-4 right-4 flex items-center p-2 font-medium text-title-color hover:text-white bg-card-bg rounded-3xl hover:bg-primary transition-all duration-75 ease-in-out;
 }
 </style>

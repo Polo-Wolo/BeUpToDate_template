@@ -27,7 +27,7 @@ export interface Project {
 export interface Infos {
     first_name: string;
     last_name: string;
-    mail: string;
+    email: string;
     phone: string;
     adress: string;
     city: string;
@@ -38,4 +38,5 @@ export interface Infos {
     facebook: string;
     github: string;
     instagram: string;
+    profile_picture_url: string;
 }

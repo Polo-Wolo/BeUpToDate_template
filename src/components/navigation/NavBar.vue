@@ -11,7 +11,7 @@
       <router-link :to="{name:'Home', hash:'#education'}">Education</router-link>
       <router-link :to="{name:'Home', hash:'#work-experience'}">Work Experience</router-link>
       <router-link :to="{name:'Home', hash:'#projects'}">Projects</router-link>
-      <router-link :to="{name:'Home', hash:'#aboutme'}">About Me</router-link>
+      <router-link :to="{name:'Home', hash:'#about-me'}">About Me</router-link>
     </div>
     <div class="flex-grow"></div>
     <SocialNetworkBar></SocialNetworkBar>

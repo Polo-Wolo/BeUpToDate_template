@@ -23,7 +23,6 @@
       <Carousel :settings="settings" :breakpoints="breakpoints" :wrapAround="true" :autoplay="4000" :transition="500">
           <Slide v-for="slide in project.pictures_url" :key="slide">
               <div class="carousel__item picture" :style="{ backgroundImage: 'url(' + slide + ')' }"></div>
-              <!-- https://picsum.photos/400/600 -->
           </Slide>
 
           <template #addons>
@@ -31,7 +30,7 @@
           </template>
       </Carousel>
       <p class="content">
-        {{ project.content }}
+        <p v-for="(paragraph, index) in project.content" :key="index">{{ paragraph }}</p>
        </p>
     </div>
 </template>
@@ -53,6 +52,9 @@ export default defineComponent({
     ...mapGetters({
       getProjectById: "getProjectById",
     }),
+  },
+  mounted() {
+    window.scrollTo(0,0);
   },
   data: () => ({
     // carousel settings
@@ -106,7 +108,7 @@ export default defineComponent({
   transform: scale(0.9);
   opacity: 1;
   transition: 0.3s;
-  @apply brightness-50;
+  @apply brightness-25;
 }
 .carousel__slide--visible > .carousel__item {
   transform: rotateY(0);

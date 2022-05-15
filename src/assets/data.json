@@ -3,7 +3,7 @@
 	{
 		"first_name": "Paul",
 		"last_name": "Walczak",
-		"mail": "paul.wzk.pro@gmail.com",
+		"email": "paul.wzk.pro@gmail.com",
 		"phone": "+33 6 15 51 14 06",
 		"adress": "80 rue du Torpilleur Foudroyant",
 		"city": "Brest",
@@ -13,7 +13,8 @@
 		"discord": "https://discordapp.com/users/463767435359551516/",
 		"facebook": "https://www.facebook.com/profile.php?id=100009639675518",
 		"github": "https://github.com/Polo-Wolo",
-		"instagram": "https://github.com/Polo-Wolo"
+		"instagram": "https://www.instagram.com/paul_wzk/",
+		"profile_picture_url": "src/assets/profile_picture.jpg"
 
 	},
 	"educations": [
@@ -170,7 +171,8 @@
 				"https://picsum.photos/1200/800",
 				"https://picsum.photos/1200/800"
 			],
-			"id": 0
+			"id": 0,
+			"tags": "dyno"
 		},
 		{
 			"title": "MicroRaptor",
@@ -188,7 +190,8 @@
 				"https://picsum.photos/1200/800",
 				"https://picsum.photos/1200/800"
 			],
-			"id": 1
+			"id": 1,
+			"tags": "mini"
 		},
 		{
 			"title": "Lighthouse Post",
@@ -206,7 +209,8 @@
 				"https://picsum.photos/1200/800",
 				"https://picsum.photos/1200/800"
 			],
-			"id": 2
+			"id": 2,
+			"tags": "homemade"
 		},
 		{
 			"title": "Synthetic mind",
@@ -224,7 +228,8 @@
 				"https://picsum.photos/1200/800",
 				"https://picsum.photos/1200/800"
 			],
-			"id": 3
+			"id": 3,
+			"tags": "analog"
 		},
 		{
 			"title": "Virtual Revolution",
@@ -242,7 +247,8 @@
 				"https://picsum.photos/1200/800",
 				"https://picsum.photos/1200/800"
 			],
-			"id": 4
+			"id": 4,
+			"tags": "virtual"
 		},
 		{
 			"title": "Optimal Vision",
@@ -260,7 +266,8 @@
 				"https://picsum.photos/1200/800",
 				"https://picsum.photos/1200/800"
 			],
-			"id": 5
+			"id": 5,
+			"tags": "crypto"
 		}
 	]
 }
