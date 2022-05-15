@@ -1,7 +1,3 @@
-export interface HeaderLinks {
-    title: string;
-}
-
 export interface Education {
     title: string;
     location: string;
@@ -26,4 +22,21 @@ export interface Project {
     time: string;
     content: Array<string>;
     pictures_url: Array<string>;
+}
+
+export interface Infos {
+    first_name: string;
+    last_name: string;
+    email: string;
+    phone: string;
+    adress: string;
+    city: string;
+    zip: string;
+    licence: string;
+    linkedin: string;
+    discord: string;
+    facebook: string;
+    github: string;
+    instagram: string;
+    profile_picture_url: string;
 }

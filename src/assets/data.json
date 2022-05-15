@@ -1,4 +1,22 @@
 {
+	"infos":
+	{
+		"first_name": "Paul",
+		"last_name": "Walczak",
+		"email": "paul.wzk.pro@gmail.com",
+		"phone": "+33 6 15 51 14 06",
+		"adress": "80 rue du Torpilleur Foudroyant",
+		"city": "Brest",
+		"zip": "29200",
+		"licence": "B",
+		"linkedin": "https://www.linkedin.com/in/paul-walczak-639106194/",
+		"discord": "https://discordapp.com/users/463767435359551516/",
+		"facebook": "https://www.facebook.com/profile.php?id=100009639675518",
+		"github": "https://github.com/Polo-Wolo",
+		"instagram": "https://www.instagram.com/paul_wzk/",
+		"profile_picture_url": "src/assets/profile_picture.jpg"
+
+	},
 	"educations": [
 		{
 			"title": "Generalist Engineer",
@@ -149,10 +167,12 @@
 			],
 			"pictures_url": [
 				"https://randomwordgenerator.com/img/picture-generator/53e7d44b4a5aa514f1dc8460962e33791c3ad6e04e507749702c73d1924cc2_640.jpg",
-				"https://picsum.photos/300/200",
-				"https://picsum.photos/300/200"
+				"https://picsum.photos/1200/800",
+				"https://picsum.photos/1200/800",
+				"https://picsum.photos/1200/800"
 			],
-			"id": 0
+			"id": 0,
+			"tags": "dyno"
 		},
 		{
 			"title": "MicroRaptor",
@@ -166,10 +186,12 @@
 			],
 			"pictures_url": [
 				"https://randomwordgenerator.com/img/picture-generator/52e7d3474b50a914f1dc8460962e33791c3ad6e04e50744172277fd0974ecd_640.jpg",
-				"https://picsum.photos/300/200",
-				"https://picsum.photos/300/200"
+				"https://picsum.photos/1200/800",
+				"https://picsum.photos/1200/800",
+				"https://picsum.photos/1200/800"
 			],
-			"id": 1
+			"id": 1,
+			"tags": "mini"
 		},
 		{
 			"title": "Lighthouse Post",
@@ -183,10 +205,12 @@
 			],
 			"pictures_url": [
 				"https://images.unsplash.com/photo-1484589065579-248aad0d8b13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHJhbmRvbSUyMGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-				"https://picsum.photos/300/200",
-				"https://picsum.photos/300/200"
+				"https://picsum.photos/1200/800",
+				"https://picsum.photos/1200/800",
+				"https://picsum.photos/1200/800"
 			],
-			"id": 2
+			"id": 2,
+			"tags": "homemade"
 		},
 		{
 			"title": "Synthetic mind",
@@ -200,10 +224,12 @@
 			],
 			"pictures_url": [
 				"https://randomwordgenerator.com/img/picture-generator/51e6dd444a54b10ff3d8992cc12c30771037dbf85254794e732f7bd49344_640.jpg",
-				"https://picsum.photos/300/200",
-				"https://picsum.photos/300/200"
+				"https://picsum.photos/1200/800",
+				"https://picsum.photos/1200/800",
+				"https://picsum.photos/1200/800"
 			],
-			"id": 3
+			"id": 3,
+			"tags": "analog"
 		},
 		{
 			"title": "Virtual Revolution",
@@ -217,10 +243,12 @@
 			],
 			"pictures_url": [
 				"https://randomwordgenerator.com/img/picture-generator/54e0d3434a56b10ff3d8992cc12c30771037dbf85254794e70267cdc9544_640.jpg",
-				"https://picsum.photos/300/200",
-				"https://picsum.photos/300/200"
+				"https://picsum.photos/1200/800",
+				"https://picsum.photos/1200/800",
+				"https://picsum.photos/1200/800"
 			],
-			"id": 4
+			"id": 4,
+			"tags": "virtual"
 		},
 		{
 			"title": "Optimal Vision",
@@ -234,10 +262,12 @@
 			],
 			"pictures_url": [
 				"https://randomwordgenerator.com/img/picture-generator/52e6d0444c56aa14f1dc8460962e33791c3ad6e04e5074417c2d78d2934fc6_640.jpg",
-				"https://picsum.photos/300/200",
-				"https://picsum.photos/300/200"
+				"https://picsum.photos/1200/800",
+				"https://picsum.photos/1200/800",
+				"https://picsum.photos/1200/800"
 			],
-			"id": 5
+			"id": 5,
+			"tags": "crypto"
 		}
 	]
 }

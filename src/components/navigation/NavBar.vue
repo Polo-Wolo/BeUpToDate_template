@@ -1,7 +1,7 @@
 <template>
   <nav id="nav">
     <div class="xl:w-1/12"></div>
-    <router-link to="/" class="name">Paul</router-link>
+    <router-link to="/" class="name">{{ infos.first_name }}</router-link>
     <div class="flex-grow"></div>
     <div class="link-table">
       <router-link to="/" class="inline-flex items-center space-x-2 xl:space-x-3 group">
@@ -11,7 +11,7 @@
       <router-link :to="{name:'Home', hash:'#education'}">Education</router-link>
       <router-link :to="{name:'Home', hash:'#work-experience'}">Work Experience</router-link>
       <router-link :to="{name:'Home', hash:'#projects'}">Projects</router-link>
-      <router-link :to="{name:'Home', hash:'#aboutme'}">About Me</router-link>
+      <router-link :to="{name:'Home', hash:'#about-me'}">About Me</router-link>
     </div>
     <div class="flex-grow"></div>
     <SocialNetworkBar></SocialNetworkBar>
@@ -22,6 +22,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { mapGetters } from "vuex";
 import SocialNetworkBar from "../SocialNetworkBar.vue";
 
 export default defineComponent({
@@ -29,11 +30,11 @@ export default defineComponent({
   components: {
     SocialNetworkBar: SocialNetworkBar,
   },
-  methods: {
-  test(refName): Function {
-    console.log(refName);
-  }
-}
+  computed: {
+    ...mapGetters({
+      infos: "infos",
+    }),
+  },
 });
 </script>
 

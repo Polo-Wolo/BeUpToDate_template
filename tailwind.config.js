@@ -24,6 +24,7 @@ module.exports = {
 			},
       height: {
         '18': '4.5rem',
+        '32': '8rem',
       },
       fontSize :{
         "10xl": '10rem',
@@ -55,6 +56,9 @@ module.exports = {
       scale: {
         '175': '1.75',
       },
+      brightness: {
+        25: '.25',
+      }
     },
     fontFamily: {
       'poppins': ['Poppins'],
