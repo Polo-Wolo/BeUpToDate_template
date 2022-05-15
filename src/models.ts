@@ -22,6 +22,9 @@ export interface Project {
     time: string;
     content: Array<string>;
     pictures_url: Array<string>;
+    id: number;
+    tags: string;
+
 }
 
 export interface Infos {

@@ -8,7 +8,6 @@
       <div class="grid grid-cols-1 md:grid-cols-2 w-full lg:mx-12 lg:w-auto">
         <ProjectCard class="md:mx-12"
           v-for="project in projects"
-          :key="id"
           :project="project"
         >
         </ProjectCard>
