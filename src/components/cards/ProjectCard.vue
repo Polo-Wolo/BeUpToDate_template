@@ -34,11 +34,6 @@ export default defineComponent({
       required: true,
     },
   },
-  computed: {
-    backgroundPictureUrl: function() {
-      return;
-    }
-  },
 });
 </script>
 

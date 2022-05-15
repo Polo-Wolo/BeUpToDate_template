@@ -27,7 +27,5 @@ export default defineComponent({
   -webkit-tap-highlight-color: transparent;
   -moz-osx-font-smoothing: grayscale;
 }
-.scroll-btn {
-  @apply fixed bottom-4 right-4 flex items-center p-2 font-medium text-title-color hover:text-white bg-gray-200 rounded-3xl hover:bg-primary transition-all duration-75 ease-in-out;
-}
+
 </style>

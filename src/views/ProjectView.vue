@@ -22,8 +22,8 @@
       </div>
       <Carousel :settings="settings" :breakpoints="breakpoints" :wrapAround="true" :autoplay="4000" :transition="500">
           <Slide v-for="slide in project.pictures_url" :key="slide">
-              <div class="carousel__item">https://picsum.photos/200/300 <!--{{ slide }}--></div>
-              <!-- https://picsum.photos/200/300 -->
+              <div class="carousel__item picture" :style="{ backgroundImage: 'url(' + slide + ')' }"></div>
+              <!-- https://picsum.photos/400/600 -->
           </Slide>
 
           <template #addons>
@@ -83,6 +83,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.picture {
+    @apply w-full h-full bg-cover bg-center bg-no-repeat rounded-2xl flex filter brightness-50 transition-all duration-100 ease-in-out;
+  }
 .carousel__item {
   color: var(--vc-clr-white);
   font-size: 20px;
@@ -92,17 +95,12 @@ export default defineComponent({
   align-items: center;
   @apply bg-primary w-full h-60 md:h-44 lg:h-44 xl:h-60 min-w-max;
 }
-
 .carousel__slide {
   @apply py-4 md:py-10 lg:py-8 xl:py-17;
 }
-
 .carousel__prev,
 .carousel__next {
   box-sizing: content-box;
-}
-.carousel__icon {
-
 }
 .carousel__slide > .carousel__item {
   transform: scale(0.9);
@@ -122,7 +120,6 @@ export default defineComponent({
 .carousel__slide--active > .carousel__item {
   @apply brightness-100 z-50 scale-100 md:scale-125 lg:scale-125;
 }
-
 .title {
   @apply text-title-color font-bold text-3xl;
 }

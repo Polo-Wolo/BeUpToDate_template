@@ -37,4 +37,5 @@ export interface Infos {
     discord: string;
     facebook: string;
     github: string;
+    instagram: string;
 }
