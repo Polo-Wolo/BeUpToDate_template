@@ -40,6 +40,7 @@ import { defineComponent } from 'vue';
 import { mapGetters } from "vuex";
 import { Carousel, Navigation, Slide } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
+import { Project } from '../models';
 
 export default defineComponent({
   name: "Autoplay",
@@ -67,7 +68,7 @@ export default defineComponent({
         itemsToShow: 2,
       },
     },
-    project : null
+    project:{} as Project
   }),
   created() {
     // watch the params of the route to fetch the data again

@@ -12,7 +12,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "ScollButton",
   methods:{
-    moveUp(): Function{
+    moveUp() {
       window.scrollTo(0,0);
     }
   }

@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, PropType } from "vue";
 import { Project } from "../../models";
 
 export default defineComponent({
