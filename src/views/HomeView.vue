@@ -1,7 +1,7 @@
 <template>
   <Education></Education>
   <WorkExperience></WorkExperience>
-  <!--<CurriculumVitae></CurriculumVitae>-->
+  <CurriculumVitae></CurriculumVitae>
   <Projects></Projects>
   <AboutMe></AboutMe>
 </template>

@@ -62,8 +62,11 @@ export default defineComponent({
       @apply w-40 md:w-56 xl:w-72 flex-col space-y-5;
     }
   }
-  canvas {
+  .vue-pdf-embed {
     @apply rounded-2xl outline outline-0 hover:outline-8 outline-primary transition-all duration-100 ease-in-out;
+  }
+  canvas {
+    @apply rounded-2xl;
   }
   .btn {
     @apply mx-auto flex items-center h-10 px-5 font-medium space-x-2 text-title-color hover:text-white bg-gray-200 rounded-lg hover:bg-primary transition-all duration-75 ease-in-out;
