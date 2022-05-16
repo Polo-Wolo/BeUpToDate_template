@@ -13,6 +13,6 @@
     "noImplicitAny": false,
     "allowJs": true,
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx","src/**/*.tsc", "src/**/*.vue", "src/router/index.ts", "src/main.js"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx","src/**/*.tsc", "src/**/*.vue", "src/router/index.ts", "src/main.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
