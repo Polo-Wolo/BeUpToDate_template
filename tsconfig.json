@@ -12,9 +12,6 @@
     "lib": ["esnext", "dom"],
     "noImplicitAny": false,
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/router/index.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }],
-  "mime": {
-    "text/x-typescript": ["ts","tsx"]
-  }
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx","src/**/*.tsc", "src/**/*.vue", "src/router/index.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
