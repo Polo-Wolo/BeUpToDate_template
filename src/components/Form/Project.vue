@@ -50,12 +50,12 @@
         />
         <!-- time-->
         <FormKit
-          type="date"
+          type="text"
           name="time"
-          value="2011-01-01"
+          value=""
           label="Durré du projet"
           help="Saisissez la durée du projet."
-          validation="required|before:2010-01-01"
+          validation="required"
           validation-visibility="live"
           :delay="1000"
         />
@@ -118,8 +118,21 @@ export default {
   props: {
     modelValue: {},
   },
+  // watch: {
+  //   modelValue: {
+  //     handler(new_value, old_value) {
+  //       console.log("Watcher modelValue");
+  //       this.modelValue = new_value;
+  //       updateValue();
+  //     },
+  //     deep: true,
+  //   },
+  // },
   data() {
     return { /*pictures_url: Array()*/ };
+  },
+  mounted (){
+    this.updateValue();
   },
   methods: {
     ImageURLList(pictures) {
@@ -127,7 +140,7 @@ export default {
       console.log("updateImageURLList");
       pictures_url = Array();
       for (var i of pictures) {
-        console.log(i.file);
+        //console.log(i.file);
         var img_URL = URL.createObjectURL(i.file);
         //console.log(img_URL);
         pictures_url.push(img_URL);        
@@ -141,7 +154,7 @@ export default {
       // console.log(typeof(start_date));
       // console.log(this.modelValue.time);
       //console.log("typeof(this.pictures)")
-      console.log("this.pictures")
+      //console.log("this.pictures")
       console.log(this.modelValue.pictures.length >0)
       if (this.modelValue.pictures){
         this.modelValue.pictures_url=this.ImageURLList(this.modelValue.pictures);
@@ -153,7 +166,9 @@ export default {
       this.$emit("update:modelValue", this.modelValue);
     },
     get_URL(image){
-      return URL.createObjectURL(image.file);
+      console.log("image")
+      console.log(image)
+      return "";//URL.createObjectURL(image.file);
     }
   },
 };

@@ -59,7 +59,7 @@ export default defineComponent({
     @apply w-full h-full bg-cover bg-center bg-no-repeat rounded-2xl flex filter brightness-50 transition-all duration-100 ease-in-out;
   }
   .content {
-    @apply flex-col space-y-5 py-11 px-8 h-full absolute right-1/2 transform translate-x-1/2 bottom-1/2 translate-y-1/2 font-bold text-gray-600 w-full text-center select-none;
+    @apply flex-col space-y-5 py-11 px-8 h-full absolute right-1/2 transform translate-x-1/2 bottom-1/2 translate-y-1/2 font-bold text-gray-400 w-full text-center select-none;
     .title {
       @apply text-lg;
     }

@@ -5,7 +5,7 @@ import data from "../assets/data.json"
 
 export default createStore({
 	state: {
-		projects : data.projects,
+		// projects : data.projects,
 	}, //data
 	mutations: {
 		SET_PROJECTS(state: any, projects: Array<Project>): void {
@@ -24,7 +24,7 @@ export default createStore({
 	},
 	actions: {
 		init({commit}: any) {
-			commit("SET_PROJECTS", data.projects);
+			//commit("SET_PROJECTS", data.projects);
 			commit("SET_EDUCATIONS", data.educations);
 			commit("SET_WORKEXPERIENCES", data.workexperiences);
 			commit("SET_INFOS", data.infos);

@@ -54,20 +54,20 @@ export default defineComponent({
   },  
   mounted() {
     this.eventBus.on("send_data", (projects_in) => {
-      console.log("projects_in");
-      console.log(projects_in);
+      // console.log("projects_in");
+      // console.log(projects_in);
       //console.log(store.state.projects);
       //store.state.projects=projects_in // typed as number
       //alert(args);
       // console.log("args");
       // console.log(args);
-      console.log("projects");
-      console.log(this.projects);
+      // console.log("projects");
+      // console.log(this.projects);
       //this.projects=projects_in;
       store.commit("SET_PROJECTS", projects_in);
 
-      console.log("projects");
-      console.log(this.projects);      
+      // console.log("projects");
+      // console.log(this.projects);      
     });
   },
 });

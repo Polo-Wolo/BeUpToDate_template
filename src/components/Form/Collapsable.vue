@@ -32,13 +32,3 @@ export default {
 };
 </script>
 <style src="./style.css"/>
-<style scoped>
-.header {
-  border: solid 0.2em;
-  border-color: crimson;
-}
-.container {
-  border: solid 0.2em;
-  border-color: greenyellow;
-}
-</style>

@@ -101,7 +101,6 @@ import Project from "../Form/Project.vue";
 import FileSaver from "file-saver";
 
 import JSZip from "jszip";
-//import fs from "fs";
 
 export default {
   name: "Content",
@@ -129,15 +128,8 @@ export default {
   watch: {
     projects: {
       handler(new_value, old_value) {
-        //console.log("Watcher");
         this.projects = new_value;
-        //console.log(this.projects);
-        //updateConfigFile();
-        //this.config = Array();
-        this.config.projects = this.projects;
-        // console.log("this.config");
-        // console.log(this.config);
-        //this.$emit("update:modelValue", this.config);
+        //this.config.projects = this.projects;
         this.sendProject();
       },
       deep: true,
@@ -186,29 +178,32 @@ export default {
           // console.log(data_config[0].projects);
           // console.log("this.projects");
           // console.log(this.projects);
-          this.projects = data_config[0].projects;
+          //this.projects = data_config[0].projects;
           zip.folder("images").forEach(
             async function (relativePath, file) {
-              for (var i of this.projects) {
-                // console.log("i");
-                // console.log(i);
+              //var projects_data=this.projects;
+              for (var i of data_config[0].projects) {
+                 console.log("i");
+                 console.log(i);
                 for (var ii of i.pictures) {
-                  // console.log("ii");
-                  // console.log(ii);
+                   console.log("ii");
+                   console.log(ii);
                   // console.log("file.name");
                   // console.log(file.name);
                   // console.log("ii.name");
                   // console.log(ii.name);
                   if (file.name == "images/" + ii.name) {
-                    // console.log("Match");
+                    console.log("Match");
                     ii.file = new File(
                       [await zip.file(file.name).async("blob")],
                       file.name
                     );
-                    // console.log(ii.file);
+                    console.log("ii.file");
+                    console.log(ii.file);
                   }
                 }
               }
+              this.projects=data_config[0].projects;
             }.bind(this)
           );
           //var images = zip[""];
@@ -228,7 +223,11 @@ export default {
     },
     updateConfigFile() {
       this.config = Array();
-      this.config.push({ projects: this.projects });
+      var projects_config=this.projects;
+      for(var project of projects_config){
+        delete project.pictures_url;
+      }
+      this.config.push({ projects: projects_config });
     },
     sendProject() {
       //this.updateConfigFile();
@@ -267,14 +266,4 @@ export default {
   },
 };
 </script>
-<style scoped lang="scss">
-.content {
-  border: solid 0.2em;
-  border-color: blueviolet;
-}
-.forItem {
-  border: solid 0.2em;
-  border-color: orange;
-}
-</style>
 <style src="./style.css"/>

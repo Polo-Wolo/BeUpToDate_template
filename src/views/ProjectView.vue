@@ -1,6 +1,5 @@
 <template>
 <p>{{project}}</p>
-<p>id : {{this.$route.params.id}}</p>
     <div class="mx-3 lg:mx-auto my-2 md:   lg:my-12 xl:my-20 lg:w-2/3 xl:w-1/2">
       <div class="title">
         {{ project.title }}
@@ -31,9 +30,10 @@
               <Navigation class="bg-primary border-white hidden lg:flex"/>
           </template>
       </Carousel>
-      <p class="content">
-        <p v-for="(paragraph, index) in project.content" :key="index">{{ paragraph }}</p>
-      </p>
+      <pre class="content">
+        <!-- <p v-for="(paragraph, index) in project.content" :key="index">{{ paragraph }}</p> -->
+        {{project.content}}
+      </pre>
     </div>
 </template>
 
@@ -147,7 +147,7 @@ export default defineComponent({
   @apply inline-flex items-center font-bold;
 }
 .content {
-  @apply text-title-color mx-6 xl:mx-14 lg:mt-4 leading-loose text-justify;
+  @apply text-title-color mx-6 xl:mx-14 lg:mt-4 leading-loose ; //text-justify
 }
 </style>
 
