@@ -4,9 +4,12 @@ import data from "../assets/data.json"
 
 
 export default createStore({
-	state: {},
+	state: {
+		projects : data.projects,
+	}, //data
 	mutations: {
 		SET_PROJECTS(state: any, projects: Array<Project>): void {
+			//console.log("SET_PROJECTS");
 			state.projects = projects;
 		},
 		SET_EDUCATIONS(state: any, educations: Array<Education>): void {

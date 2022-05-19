@@ -1,8 +1,8 @@
 <template>
+  <Projects></Projects>
   <Education></Education>
   <WorkExperience></WorkExperience>
-  <CurriculumVitae></CurriculumVitae>
-  <Projects></Projects>
+  <CurriculumVitae></CurriculumVitae>  
   <AboutMe></AboutMe>
 </template>
 

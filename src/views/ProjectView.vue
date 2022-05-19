@@ -1,4 +1,6 @@
 <template>
+<p>{{project}}</p>
+<p>id : {{this.$route.params.id}}</p>
     <div class="mx-3 lg:mx-auto my-2 md:   lg:my-12 xl:my-20 lg:w-2/3 xl:w-1/2">
       <div class="title">
         {{ project.title }}
@@ -31,16 +33,18 @@
       </Carousel>
       <p class="content">
         <p v-for="(paragraph, index) in project.content" :key="index">{{ paragraph }}</p>
-       </p>
+      </p>
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 import { mapGetters } from "vuex";
-import { Carousel, Navigation, Slide } from 'vue3-carousel';
-import 'vue3-carousel/dist/carousel.css';
-import { Project } from '../models';
+import { Carousel, Navigation, Slide } from "vue3-carousel";
+import "vue3-carousel/dist/carousel.css";
+import { Project } from "../models";
+
+import store from "../store";
 
 export default defineComponent({
   name: "Autoplay",
@@ -50,45 +54,50 @@ export default defineComponent({
     Slide,
   },
   computed: {
-    ...mapGetters({
-      getProjectById: "getProjectById",
-    }),
+    // ...mapGetters({
+    //   getProjectById: "getProjectById",
+    // }),
+
+    project() {
+      //return store.getters.getProjectById(this.$route.params.id);
+      return store.state.projects.find(project=>project.id == this.$route.params.id);
+    },
   },
   mounted() {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   },
   data: () => ({
     // carousel settings
     settings: {
       itemsToShow: 1,
-      snapAlign: 'center',
+      snapAlign: "center",
     },
     breakpoints: {
       768: {
         itemsToShow: 2,
       },
     },
-    project:{} as Project
+    // project:{} as Project
   }),
-  created() {
-    // watch the params of the route to fetch the data again
-    this.$watch(
-      () => this.$route.params,
-      () => {
-        this.project = this.getProjectById(this.$route.params.id);
-      },
-      // fetch the data when the view is created and the data is
-      // already being observed
-      { immediate: true }
-    )
-  },
+  // created() {
+  //   // watch the params of the route to fetch the data again
+  //   this.$watch(
+  //     () => this.$route.params,
+  //     () => {
+  //       this.project = this.getProjectById(this.$route.params.id);
+  //     },
+  //     // fetch the data when the view is created and the data is
+  //     // already being observed
+  //     { immediate: true }
+  //   )
+  // },
 });
 </script>
 
 <style lang="scss" scoped>
 .picture {
-    @apply w-full h-full bg-cover bg-center bg-no-repeat rounded-2xl flex filter brightness-50 transition-all duration-100 ease-in-out;
-  }
+  @apply w-full h-full bg-cover bg-center bg-no-repeat rounded-2xl flex filter brightness-50 transition-all duration-100 ease-in-out;
+}
 .carousel__item {
   color: var(--vc-clr-white);
   font-size: 20px;
@@ -132,8 +141,10 @@ export default defineComponent({
     @apply w-6 h-6 mx-1 stroke-2;
   }
 }
-.date, .time, .tags {
-  @apply inline-flex items-center font-bold ;
+.date,
+.time,
+.tags {
+  @apply inline-flex items-center font-bold;
 }
 .content {
   @apply text-title-color mx-6 xl:mx-14 lg:mt-4 leading-loose text-justify;

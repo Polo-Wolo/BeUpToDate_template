@@ -21,15 +21,21 @@ import { defineComponent } from "vue";
 import { mapGetters } from "vuex";
 import ProjectCard from "../components/cards/ProjectCard.vue";
 
+import { mapActions } from 'vuex'
+import store from "../store";
+
 export default defineComponent({
   name: "Projects",
   components: {
     ProjectCard,
   },
   computed: {
-    ...mapGetters({
-      projects: "projects",
-    }),
+    // ...mapGetters({
+    //   projects: "projects",
+    // }),
+    projects () {
+      return store.state.projects;
+    }
   },
 });
 </script>
