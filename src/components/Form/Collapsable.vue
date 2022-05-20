@@ -8,7 +8,7 @@
       label="Cacher/Montrer les champs"
       @click="toggleContent()"
     />
-    <div class="content" v-if="show_content">
+    <div class="content" v-show="show_content">
       <slot></slot>
     </div>
   </div>
