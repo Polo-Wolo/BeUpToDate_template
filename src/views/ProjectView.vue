@@ -1,5 +1,5 @@
 <template>
-<p>{{project}}</p>
+<!-- <p>{{project}}</p> -->
     <div class="mx-3 lg:mx-auto my-2 md:   lg:my-12 xl:my-20 lg:w-2/3 xl:w-1/2">
       <div class="title">
         {{ project.title }}

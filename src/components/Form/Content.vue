@@ -21,8 +21,8 @@
       @click="saveConfigFile()"
     />
 
-    <p>Fichier de configuration à charger :{{ config_file }}</p>
-    <p>Configuration à sauvegarder : {{ config }}</p>
+    <!-- <p>Fichier de configuration à charger :{{ config_file }}</p>
+    <p>Configuration à sauvegarder : {{ config }}</p> -->
     <Collapsable>
       <template v-slot:header>
         <strong><p>Project</p></strong>
@@ -30,7 +30,7 @@
       <FormKit
         id="addButton"
         type="button"
-        label="add project"
+        label="Ajouter un projet."
         @click="addProject()"
       />
       <div
@@ -43,18 +43,18 @@
             <Project v-model="projects[index]" />
             <FormKit
               type="button"
-              label="delete project"
+              label="Supprimer le projet."
               @click="deleteProject(index)"
             />
           </Collapsable>
         </div>
       </div>
-      <h2>Modeled group values in Content</h2>
-      <pre>{{ projects }}</pre>
+      <!-- <h2>Modeled group values in Content</h2>
+      <pre>{{ projects }}</pre> -->
     </Collapsable>
-    <h2>Config :</h2>
+    <!-- <h2>Config :</h2> -->
     <!-- Afficher rien quand j'afficher juste config -->
-    <pre>{{ config.projects }}</pre>
+    <!-- <pre>{{ config.projects }}</pre> -->
 
     <!-- <Collapsable>
       <template v-slot:header>
@@ -102,6 +102,8 @@ import FileSaver from "file-saver";
 
 import JSZip from "jszip";
 
+import store from "../../store";
+
 export default {
   name: "Content",
   components: {
@@ -112,7 +114,6 @@ export default {
     // WorkExperience,
     // CV,
   },
-  emits: ['send_event'],
   data() {
     return {
       project_max_id: 0,
@@ -129,8 +130,7 @@ export default {
     projects: {
       handler(new_value, old_value) {
         this.projects = new_value;
-        //this.config.projects = this.projects;
-        this.sendProject();
+        store.commit("SET_PROJECTS", this.projects);
       },
       deep: true,
     },
@@ -149,10 +149,8 @@ export default {
         this.project_max_id = 0;
       }
     },
-    //Remplacé par les watchers
     async loadConfigFile() {
       console.log("loadConfigFile");
-      //console.log(this.config_file);
       var blob = new Blob([this.config_file[0].file], {
         type: "application/octet-binary",
       });
@@ -160,92 +158,54 @@ export default {
       var zip = new JSZip();
       var zip_content = zip.loadAsync(blob /* = file blob */).then(
         async function (zip) {
-          // console.log("zip");
-          // console.log(zip);
+          //Chargement du fichier .json
           var config_json = await zip.file("config.json").async("text");
-          // console.log("config_json");
-          // console.log(config_json);
-          //var config_json = zip.files["config.json"];
-          //const text = await config_json.text();
-          //console.log("text");
-          //console.log(text);
-          //console.log("text");
-          //console.log(text);
           const data_config = await JSON.parse(config_json);
-          // console.log("data_config");
-          // console.log(data_config);
-          // console.log("data_config[0].projects");
-          // console.log(data_config[0].projects);
-          // console.log("this.projects");
-          // console.log(this.projects);
-          //this.projects = data_config[0].projects;
+
+          //Chargement des images de l'archive et réatribution à chaques projets de ses images.
           zip.folder("images").forEach(
             async function (relativePath, file) {
-              //var projects_data=this.projects;
               for (var i of data_config[0].projects) {
-                 console.log("i");
-                 console.log(i);
                 for (var ii of i.pictures) {
-                   console.log("ii");
-                   console.log(ii);
-                  // console.log("file.name");
-                  // console.log(file.name);
-                  // console.log("ii.name");
-                  // console.log(ii.name);
                   if (file.name == "images/" + ii.name) {
                     console.log("Match");
                     ii.file = new File(
                       [await zip.file(file.name).async("blob")],
                       file.name
                     );
-                    console.log("ii.file");
-                    console.log(ii.file);
                   }
                 }
               }
-              this.projects=data_config[0].projects;
+              this.projects = data_config[0].projects;
             }.bind(this)
           );
-          //var images = zip[""];
           // process ZIP file content here
-          alert("OK");
+          alert("Le chargement ses déroulé avec succès.");
         }.bind(this),
         function () {
-          alert("Not a valid zip file");
+          alert("Fichier zip invalide.");
         }.bind(this)
       );
-      // const text = await this.config_file[0].file.text();
-      // //console.log(text);
-      // const data_config = JSON.parse(text);
-      // //console.log(data);
-      // //console.log(data[0].projects);
-      // this.projects = data_config[0].projects;
     },
     updateConfigFile() {
       this.config = Array();
-      var projects_config=this.projects;
-      for(var project of projects_config){
+      var projects_config = this.projects;
+      for (var project of projects_config) {
         delete project.pictures_url;
       }
       this.config.push({ projects: projects_config });
-    },
-    sendProject() {
-      //this.updateConfigFile();
-      this.eventBus.emit('send_data', this.projects)
     },
     saveConfigFile() {
       console.log("saveConfigFile");
       var file_name = prompt("Saisissez le nom du fichier (sans l'extension");
       //Update config file :
       //To do : Ajouter les autre champs
-      // this.config = Array();
-      // this.config.push({ projects: this.projects });
       this.updateConfigFile();
       const zip = new JSZip();
       const data_config = JSON.stringify(this.config, null, 4);
       zip.file("config.json", data_config);
       const images = Array();
-      //Récupère les images dans les diférents projets
+      //Récupère les images dans les diférents projets et les ajouter à l'archive dans le dossier image
       for (var i of this.projects) {
         if (i.pictures) {
           for (var ii of i.pictures) {
@@ -253,7 +213,6 @@ export default {
           }
         }
       }
-      //console.log(images);
       const img = zip.folder("images");
       for (const image of images) {
         img.file(image.name, image.file);

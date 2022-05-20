@@ -1,5 +1,5 @@
 <template>
-  <p>{{projects}}</p>
+  <!-- <p>{{projects}}</p> -->
   <div class="flex">
       <div class="w-full max-w-1/4">
         <Content/>
@@ -25,50 +25,17 @@ import { bindings } from "@formkit/vue";
 
 import { mapActions } from 'vuex'
 import store from "./store";
-// import { key } from './store'
-
-
-
 
 export default defineComponent({
-  // setup(){
-  //   const store=useStore();
-  // },
   name: "App",
   components: {
     Preview,
     Content
   },
-  // setup () {
-  //   const store = useStore(key)
-
-  //   store.state.count // typed as number
-  // },
   computed: {
-    // ...mapGetters({
-    //   projects: "projects",
-    // }),
     projects () {
       return store.state.projects;
     }
-  },  
-  mounted() {
-    this.eventBus.on("send_data", (projects_in) => {
-      // console.log("projects_in");
-      // console.log(projects_in);
-      //console.log(store.state.projects);
-      //store.state.projects=projects_in // typed as number
-      //alert(args);
-      // console.log("args");
-      // console.log(args);
-      // console.log("projects");
-      // console.log(this.projects);
-      //this.projects=projects_in;
-      store.commit("SET_PROJECTS", projects_in);
-
-      // console.log("projects");
-      // console.log(this.projects);      
-    });
   },
 });
 </script>

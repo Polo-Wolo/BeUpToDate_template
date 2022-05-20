@@ -5,7 +5,7 @@
     </div>
     <FormKit
       type="button"
-      :label="'ToggleContent : ' + show_content"
+      label="Cacher/Montrer les champs"
       @click="toggleContent()"
     />
     <div class="content" v-if="show_content">

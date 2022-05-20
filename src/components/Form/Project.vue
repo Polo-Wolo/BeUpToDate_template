@@ -22,8 +22,6 @@
           name="type"
           label="Type de projet"
           placeholder="Entrer le type de projet"
-          validation="required"
-          validation-behavior="live"
           :delay="1000"
         />
         <!--Start Project-->
@@ -33,8 +31,6 @@
           value="2011-01-01"
           label="Début de votre projet"
           help="Entrer la date de début de votre projet"
-          validation="required|before:2010-01-01"
-          validation-visibility="live"
           :delay="1000"
         />
         <!-- End Project-->
@@ -44,8 +40,6 @@
           value="2011-01-01"
           label="Fin  de votre projet"
           help="Entrer la date de fin de votre projet"
-          validation="required|before:2010-01-01"
-          validation-visibility="live"
           :delay="1000"
         />
         <!-- time-->
@@ -55,7 +49,6 @@
           value=""
           label="Durré du projet"
           help="Saisissez la durée du projet."
-          validation="required"
           validation-visibility="live"
           :delay="1000"
         />
@@ -83,21 +76,12 @@
           name="tags"
           label="Tags"
           placeholder=""
-          validation="required"
-          validation-behavior="live"
           :delay="1000"
         />
       </FormKit>
 
-      <!-- <FormKit
-        id="loadConfigFile"
-        type="button"
-        label="Update image"
-        @click="updateImageURLList()"
-      /> -->
-
       <h2>Modeled group values</h2>
-      <pre class="form-data">{{ modelValue }}</pre>
+      <!-- <pre class="form-data">{{ modelValue }}</pre> -->
       <p>Images :</p>
       <div v-if="modelValue.pictures">
         <div v-for="image in modelValue.pictures" :key="image">
@@ -118,16 +102,6 @@ export default {
   props: {
     modelValue: {},
   },
-  // watch: {
-  //   modelValue: {
-  //     handler(new_value, old_value) {
-  //       console.log("Watcher modelValue");
-  //       this.modelValue = new_value;
-  //       updateValue();
-  //     },
-  //     deep: true,
-  //   },
-  // },
   data() {
     return { /*pictures_url: Array()*/ };
   },
@@ -140,21 +114,13 @@ export default {
       console.log("updateImageURLList");
       pictures_url = Array();
       for (var i of pictures) {
-        //console.log(i.file);
         var img_URL = URL.createObjectURL(i.file);
-        //console.log(img_URL);
         pictures_url.push(img_URL);        
       }
       return pictures_url;
     },
     updateValue(event) {
       console.log("updateValue");
-      // this.modelValue.time=this.modelValue.start_date-this.modelValue.end_date;
-      // console.log("typeof(start_date)");
-      // console.log(typeof(start_date));
-      // console.log(this.modelValue.time);
-      //console.log("typeof(this.pictures)")
-      //console.log("this.pictures")
       console.log(this.modelValue.pictures.length >0)
       if (this.modelValue.pictures){
         this.modelValue.pictures_url=this.ImageURLList(this.modelValue.pictures);
@@ -166,9 +132,7 @@ export default {
       this.$emit("update:modelValue", this.modelValue);
     },
     get_URL(image){
-      console.log("image")
-      console.log(image)
-      return "";//URL.createObjectURL(image.file);
+      return URL.createObjectURL(image.file);
     }
   },
 };
