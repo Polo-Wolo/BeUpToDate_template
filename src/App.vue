@@ -2,7 +2,7 @@
   <!-- <p>{{projects}}</p> -->
   <div class="flex">
       <div class="w-full max-w-1/4">
-        <Content/>
+        <Content class="content-center"/>
       </div>
       <div>
         <Preview />
