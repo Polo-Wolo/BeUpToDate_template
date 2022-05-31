@@ -1,0 +1,80 @@
+01/04/2022
+
+Création du Gantt
+Avancement Maquette Figma
+Avancement ProjectView du Template et du Portfolio
+Découverte des outils de développement WEB utilisés lors du projet : Vue3
+installation Vue3, Vite, TailwindCSS, FormKit
+tutoriels explicatifs de base
+tests des fonctionnalités en ligne sur des playground temporaires
+
+A faire
+Expliciter le ReadMe
+continuer
+
+
+
+
+
+08/04/2022
+
+Avancement maquette Figma
+Avancement ProjectView du Template
+ - carousel
+ - content
+ - details bar
+ - title
+ 
+Découverte des outils de développement WEB utilisés lors du projet : Vue3
+tutoriels explicatifs de base
+tests des fonctionnalités en ligne sur des playground temporaires
+
+A faire
+Responsive Project View
+Import data for Project View
+Routing project View
+
+
+
+
+
+29/04/2022
+
+Sytème de sauvegarde de la configuration dans un ficher
+Sytème d'import de la configuration à partir d'un fichier
+
+
+
+06/05/2022
+
+Créer instances de projet, supprimer et données accessibles depuis le contexte principal
+Tab-Bar -> Scss
+Routing-Tab-Bar
+Responsive-project page done and routing ongoing
+
+
+A faire
+Import data for Project View
+Routing project View
+
+Finir tab bar
+Jsonifier les data pour compatibilité avec le template
+
+
+
+
+
+13/05/2022
+
+Première tentative de fusion du formulaire et du template (grosse difficulté)
+Ajout (non concluant) d'un système d'onglets dans le formulaire
+
+
+
+
+
+
+20/05/2022 (Soutenance)
+
+Fusion du formulaire et du template en utlisant le syteme de destion d'état VueX
+Finalisation de la présentation
